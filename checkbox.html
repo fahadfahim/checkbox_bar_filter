@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="filter">
+        <h1>Select models</h1>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="apple" onchange="change()"/>Apple</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="samsung" onchange="change()"/>Samsung</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="mi" onchange="change()"/>Xiaomi</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="asus" onchange="change()"/>Asus</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="realme" onchange="change()"/>Realme</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="oneplus" onchange="change()"/>Oneplus</label>
+        </div>
+    </div>
+
+    <div class="result">
+        <div class="apple a9">
+          <h1>iPhone 7</h1>
+        </div>
+        <div class="apple a8">
+          <h1>iPhone 6</h1>
+        </div>
+        <div class="samsung exynos">
+          <h1>Samsung s7</h1>
+        </div>
+        <div class="xiaomi snapdragon">
+          <h1>Xiaomi Redmi note 4x</h1>
+        </div>
+    </div>
+
+    <!-- <script>
+function change() {
+  let results = Array.from(document.querySelectorAll('.result > div'));
+  // Hide all results
+  results.forEach(function(result) {
+    result.style.display = 'none';
+  });
+  // Filter results to only those that meet ALL requirements:
+  Array.from(document.querySelectorAll('.filter input[rel]:checked'), function(input) {
+    const attrib = input.getAttribute('rel');
+    results = results.filter(function(result) {
+      return result.classList.contains(attrib);
+    });
+  });
+  // Show those filtered results:
+  results.forEach(function(result) {
+    result.style.display = 'block';
+  });
+}
+change();
+
+
+
+    </script> -->
+
+    <script>
+
+const change = () =>{
+    let results = Array.from(document.querySelectorAll('.result > div'));
+    console.log(results);
+  // Hide all results
+  results.forEach((result) => result.style.display = 'none');
+
+  // Filter results to only those that meet ALL requirements:
+  Array.from(document.querySelectorAll('.filter input[rel]:checked'), (input) =>{
+    const attrib = input.getAttribute('rel');
+    results = results.filter((result) => result.classList.contains(attrib))
+  })
+
+  // Show those filtered results:
+  results.forEach((result) => result.style.display = 'block')
+}
+
+change();
+    </script>
+</body>
+</html>

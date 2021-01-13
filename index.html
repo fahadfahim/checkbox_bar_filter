@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Bar Filtering</title>
+</head>
+<body>
+    <style>
+        .prd-img{
+            width: 400px;
+            height: 400px;
+        }
+        .results{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider{
+            background-color: black;
+        }
+        .noUi-target {
+            background-color: cornflowerblue;
+    padding: 0 17px;
+}
+        .slider_sec{
+            width: 600px;
+            /* background-color: antiquewhite; */
+            margin-bottom: 20px;
+            margin: 10px auto;
+        }
+        .card{
+            height: 27rem;
+        }
+    </style>
+
+    <h2>Price</h2>
+    <div class="slider_sec">
+        <div class="slider"></div>
+        <span class="counter">Your search matches <b>0</b> results</span>
+    </div>
+    <div class="filter">
+        <h1>Select models</h1>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="apple" onchange="change()"/>Apple</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="samsung" onchange="change()"/>Samsung</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="mi" onchange="change()"/>Xiaomi</label>
+        </div>
+        
+        <div class="checkbox">
+          <label><input type="checkbox" rel="asus" onchange="change()"/>Asus</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="realme" onchange="change()"/>Realme</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" rel="oneplus" onchange="change()"/>Oneplus</label>
+        </div>
+    </div>
+
+<!-- <table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>vendor</th>
+            <th>build year</th>
+            <th>price</th>
+            <th>img</th>
+            <th>availability</th>
+        </tr>
+    </thead>
+    <tbody class="results">
+    </tbody>
+</table> -->
+
+<div class="results"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.js"></script>
+    <script src="https://unpkg.com/wnumb@1.1.0"></script>
+    <script src="main.js"></script>
+</body>
+</html>
